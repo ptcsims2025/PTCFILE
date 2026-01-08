@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PTC Login Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #2e7d32;
+      display: flex;
+      min-height: 100vh;
+      color: white;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 220px;
+      background-color: #1b5e20;
+      padding: 20px;
+    }
+
+    .sidebar h2 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .sidebar a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin: 10px 0;
+      padding: 8px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #388e3c;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .logo span {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .center-box {
+      max-width: 600px;
+    }
+
+    .center-box img {
+      height: 150px;
+      margin-bottom: 20px;
+    }
+
+    .center-box h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .center-box p {
+      font-size: 16px;
+      margin: 5px 0;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        display: none;
+      }
+
+      body {
+        flex-direction: column;
+      }
+
+      .main {
+        padding: 40px 20px;
+      }
+
+      .center-box img {
+        height: 120px;
+      }
+
+      .center-box h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="logo">
+      <img src="logo.png">
+      <span>PTC Menu</span>
+    </div>
+    <a href="enrollment_page.html">Enrollment</a>
+    <a href="student_login_page.html">Student</a>
+    <a href="faculty_login_page.html">Faculty</a>
+    <a href="admin_login_page.html">Admin</a>
+    <a href="admission_page.html">Apply for Admission</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <div class="center-box">
+      <img src="logo.png">     
+     <h1>PATEROS TECHNOLOGICAL COLLEGE</h1>
+   <p>205 College St, Pateros, Metro Manila</p>
+  <B><p style="color: yellow; font-size: 30px;">Smart Academic Management  System</p> </div></b>
+  </div>
+
+</body>
+</html>
