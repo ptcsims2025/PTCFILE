@@ -1,0 +1,22 @@
+FROM php:8.3-apache
+
+RUN set -eux; \
+apt-get update; \
+apt-get install -y --no-install-recommendation; \
+docker-php-ext-configure gd --with-freetype --with-jpeg; \
+docker-php-ext-install -j"$(nproc)" mysqli pdo_mysql zip gd mbstring curl; \
+rm -rf /var/lib/apt/lists/*
+
+WORKDIR /var/www/html
+
+COPY . /var/www/html
+
+RUN printf "%s\n" \
+"Alias /assets/ /var/www/html/assets/" \
+"<Directory var/www/html/assets/>" \
+"	Require all granted" \
+"	AllowOverride All" \
+"</Directory>" \
+> /etc/apache2/conf-enabled/assets-alias.conf
+
+EXPOSE 80
